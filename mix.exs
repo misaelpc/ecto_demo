@@ -15,11 +15,12 @@ defmodule Documents.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {Documents, []},
-    applications: [:logger,:postgrex,:ecto]]
+    applications: [:logger,:postgrex,:mariaex,:ecto]]
   end
 
   defp deps do
     [{:postgrex, ">= 0.0.0"},
+     {:mariaex, "~> 0.1"},
      {:ecto, "~> 0.9.0"}]
   end
 end
